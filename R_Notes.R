@@ -167,7 +167,7 @@ add1(null_model, scope = ~. + a + b + c, test = "F") # pick small p
 # stepwise
 # defualt steps = 1000, maximum num_steps before stop  
 step(some_model, scope = ~. + some_var + some_var, steps = 1)
-
+step(some_model, scope = ~., direction="backward", trace = FALSE)
 
 ## factor & levels
 data$varX = factor(data$varX)
